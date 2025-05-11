@@ -10,13 +10,13 @@ class Counter extends Component{
 
     increment = () => {
         this.setState((oldState) => ({
-            count: oldState + 1,
+            count: oldState.count + 1,
         }));
     };
 
     decrement = () => {
         this.setState((oldState) => ({
-            count: oldState - 1,
+            count: oldState.count - 1,
         }));
     };
 
@@ -28,7 +28,9 @@ class Counter extends Component{
                 <button onClick={this.increment}>Increment</button>
                 <button onClick={this.decrement}>Decrement</button>
             </div>
-        )
+        );
     }
         
 }
+
+export default Counter;
